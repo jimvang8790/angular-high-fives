@@ -12,16 +12,21 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <div class="jumbotron"><h1>High Fives</h1><img src="img/no-high-5.gif" width=400 height=200></div>
-    <div ng-controller="HighFiveController as hf" >
+    <div class="jumbotron"><h2>High Five!</h2><img src="img/no-high-5.gif" ><h2>Anyone?</h2></div>
+    <div ng-controller="HighFiveController as hf" ng-init="hf.heroNum">
       <div class="hero1">
-        <h2>Saitama</h2>
-        <p>Protagonist of One Punch Man is a super hero for fun and the most powerful hero alive.</p>
-        <p>A B-level rank hero in the Hero Association.</p>
-        <p>Annihilate his opponent with just ONE PUNCH</p>
+        <h1>Saitama</h1>
+        <h4>High Five Skill Level {{hf.heroNum}}</h4>
+        <p>Protagonist of One Punch Man. He is a hero for fun and the most powerful hero alive.</p>
+        <p>B-level rank hero in the Hero Association.</p>
+        <p>Annihilate his opponent with just ONE PUNCH!!!</p>
         <img src="img/onepunch.gif" class="headShot">
-        <div>
-          <button ng-click="">High Five</button>
+        <div class="hero1" ng-init="hf.userNum" ng-re>
+          <button type="button" ng-click="hf.newFun()">High Five</button>
+          <h4>Your High Five Skill Level {{hf.item}}</h4>
+        </div>
+        <div ng-init="hf.result()">
+          <h1>{{hf.object}}</h1>
         </div>
       </div>
     </div>

@@ -1,8 +1,7 @@
 myApp.service('GetHighFives', function($http){
   var counter = 0;
-  // var ramNum;
 
-  //return current value of getCounter
+  // // return current value of getCounter
   // this.counterGetter = function(){
   //   return counter;
   // };
