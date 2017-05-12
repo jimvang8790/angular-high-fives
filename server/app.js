@@ -18,3 +18,5 @@ app.use('/', function(req, res) {
 app.listen(3000, function() {
   console.log("server running, check localhost:3000");
 });
+
+// NOTE No need to touch this file. Assignment will be all on client and service sied

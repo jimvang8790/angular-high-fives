@@ -10,3 +10,8 @@
   padding: 10px 10px;
   margin: auto;
 }
+
+#quote {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2em;
+}

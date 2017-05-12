@@ -7,27 +7,29 @@
     <script src="/vendor/angular.min.js" type="text/javascript"></script>
     <script src="/vendor/angular-route.min.js" type="text/javascript"></script>
     <script src="/scripts/client.js" type="text/javascript"></script>
-    <script src="/scripts/getItems-service.js" type="text/javascript"></script>
+    <script src="/scripts/getItems-service.js" type="text/javascript"></script> <!-- source this last -->
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
   </head>
   <body>
     <div class="jumbotron"><h2>High Five!</h2><img src="img/no-high-5.gif" ><h2>Anyone?</h2></div>
     <div ng-controller="HighFiveController as hf" ng-init="hf.heroNum">
       <div class="hero1">
         <h1>Saitama</h1>
-        <h4>Saitama's Power Level {{hf.heroNum}}</h4>
+        <h4>Saitama's Power Level {{hf.heroNum}}</h4> <!-- {{hr.heroNum}} will display heroRandom generated to the DOM -->
         <p>Protagonist of One Punch Man. He is a hero for fun and the most powerful hero alive.</p>
         <p>B-level rank hero in the Hero Association.</p>
         <p>Annihilate his opponent with just ONE PUNCH!!!</p>
-        <p id="quote">"Since you don't want to high five Tom Brandy, normal PUNCH!" - Saitama</p>
+        <p id="quote">"Since you don't want to high five Tom Brandy, take this NORMAL PUNCH!" - Saitama</p>
         <img src="img/onepunch.gif" class="headShot">
         <div class="hero1" ng-init="hf.userNum" ng-re>
-          <button type="button" ng-click="hf.newFun(); hf.counting()">Fight!!!</button>
-          <h4>Your Defence Skill Level {{hf.item}}</h4>
+          <button type="button" ng-click="hf.newFun(); hf.counting()">Fight!!!</button> <!-- hf.newFun() is when the button is click a random number will be generated for user and the if/else statement -->
+          <!-- hf.counting() will be called when the button is click -->
+          <h4>Your Defence Skill Level {{hf.item}}</h4> <!-- {{hr.item}} will display userRandom generated to the DOM -->
         </div>
         <div ng-init="hf.result()">
-          <h1>{{hf.object}}</h1>
+          <h1>{{hf.object}}</h1> <!-- to display with string from the if/else statement form client side -->
           <h2>How many times Saitama attacked you! {{hf.count}}</h2>
           <!--   -->
         </div>

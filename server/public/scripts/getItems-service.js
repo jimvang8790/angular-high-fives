@@ -1,4 +1,5 @@
-myApp.service('GetHighFives', function($http){
+myApp.service('GetHighFives', function(){// no need to inject just yet b/c
+
   var counter = 0;
 
   // return current value of getCounter
@@ -11,12 +12,12 @@ myApp.service('GetHighFives', function($http){
     counter++;
   };
 
-  // grenerate Saitama's power level
+  // randomly grenerate Saitama's power level between 1 and 10
   this.heroRandom = function(){
     return (Math.floor((Math.random() * 10) + 1));
   };
 
-  // generate user's defence
+  // randomly generate user's defence number between 1 and 10
   this.userRandom = function(){
     return (Math.floor((Math.random() * 10) + 1));
   };
