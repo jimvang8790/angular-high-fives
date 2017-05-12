@@ -16,17 +16,20 @@
     <div ng-controller="HighFiveController as hf" ng-init="hf.heroNum">
       <div class="hero1">
         <h1>Saitama</h1>
-        <h4>High Five Skill Level {{hf.heroNum}}</h4>
+        <h4>Saitama's Power Level {{hf.heroNum}}</h4>
         <p>Protagonist of One Punch Man. He is a hero for fun and the most powerful hero alive.</p>
         <p>B-level rank hero in the Hero Association.</p>
         <p>Annihilate his opponent with just ONE PUNCH!!!</p>
+        <p id="quote">"Since you don't want to high five Tom Brandy, normal PUNCH!" - Saitama</p>
         <img src="img/onepunch.gif" class="headShot">
         <div class="hero1" ng-init="hf.userNum" ng-re>
-          <button type="button" ng-click="hf.newFun()">High Five</button>
-          <h4>Your High Five Skill Level {{hf.item}}</h4>
+          <button type="button" ng-click="hf.newFun(); hf.counting()">Fight!!!</button>
+          <h4>Your Defence Skill Level {{hf.item}}</h4>
         </div>
         <div ng-init="hf.result()">
           <h1>{{hf.object}}</h1>
+          <h2>How many times Saitama attacked you! {{hf.count}}</h2>
+          <!--   -->
         </div>
       </div>
     </div>

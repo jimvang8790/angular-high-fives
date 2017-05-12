@@ -6,18 +6,21 @@ myApp.controller('HighFiveController', function($http, GetHighFives){
 
   var vm = this;
   vm.items = [];
-  // // current counter
-  // vm.count = GetHighFives.counterGetter();
-  //
-  // // count up by 1
-  // vm.count = function(){
+
+  // current counter
+  vm.count = GetHighFives.counterGetter();
+
+  // count up by 1
+  // vm.counting = function(){
   //   GetHighFives.counterSetter();
   //   vm.count = GetHighFives.counterGetter();
   // };
 
+  // calling GetHighFives service function and then the heroRandom function
   vm.heroNum = GetHighFives.heroRandom();
   console.log('hero number:',vm.heroNum);
 
+  // calling GetHighFives service function and then the heroRandom function
   vm.userNum = GetHighFives.userRandom();
   console.log('user number:', vm.userNum);
 
@@ -34,6 +37,10 @@ myApp.controller('HighFiveController', function($http, GetHighFives){
     }
     else if (vm.item >= vm.heroNum) {
       vm.object = ('You survived his PUNCH!!!');
+      vm.counting = function(){
+        GetHighFives.counterSetter();
+        vm.count = GetHighFives.counterGetter();
+      };
     }
   };
 
