@@ -48,6 +48,7 @@ myApp.controller('HighFiveController', function($http, GetHighFives){
 
   // a function to store the if/else statement
   vm.result = function(){
+
     // if heroNum is greater than the users number
     if (vm.heroNum >= vm.item) {
       // then print out this string
