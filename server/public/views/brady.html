@@ -1,0 +1,23 @@
+<h1>Touch Down!!!</h1>
+<div>
+  <h1>Tom Brady</h1>
+</div>
+
+<div ng-controller="SadFiveController as sf" ng-init="hf.bradyNum">
+
+  <h4>Tom Brady's High Five Skill Level {{sf.bradyNum}}</h4> <!-- {{hr.heroNum}} will display heroRandom generated to the DOM -->
+  <p>Quaterback for the New England Patriots.</p>
+  <p>5X Suber Bowl Champ and 3X Suber Bowl MVP.</p>
+  <p>Arguably the greatest football player ever to take the field.</p>
+  <p id="quote">"Common!WOOOO! Up High Somebody???" - Brady</p>
+  <img src="img/no-high-5.gif" class="headShot">
+  <div class="hero1" ng-init="sf.teamNum" ng-re>
+    <button type="button" ng-click="sf.noFun()">High Five!!!</button> <!-- hf.newFun() is when the button is click a random number will be generated for user and the if/else statement -->
+    <!-- hf.counting() will be called when the button is click -->
+    <h4>His Team's High Five Skill Level {{sf.sad}}</h4> <!-- {{hr.item}} will display userRandom generated to the DOM -->
+  </div>
+  <div ng-init="sf.aftermath()">
+    <h1>{{sf.thing}}</h1> <!-- to display with string from the if/else statement form client side -->
+    <h2>How many people ignore Tom Brady! {{sf.completed}}</h2>
+  </div>
+</div>

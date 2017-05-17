@@ -1,0 +1,25 @@
+<h1>A new Threat has Appeared!!!</h1>
+<div>
+  <h1>Saitama</h1>
+</div>
+
+<div ng-controller="HighFiveController as hf" ng-init="hf.heroNum">
+
+  <h4>Saitama's Power Level {{hf.heroNum}}</h4> <!-- {{hr.heroNum}} will display heroRandom generated to the DOM -->
+  <p>Protagonist of One Punch Man. He is a hero for fun and the most powerful hero alive.</p>
+  <p>B-level rank hero in the Hero Association.</p>
+  <p>Annihilate his opponent with just ONE PUNCH!!!</p>
+  <p id="quote">"Since you don't want to high five Tom Brandy, take this NORMAL PUNCH!!!" - Saitama</p>
+  <!-- <img src="img/onepunch.gif" class="headShot"> -->
+  <img src="{{hf.picture}}">
+  <div class="hero1" ng-init="hf.userNum" >
+    <button type="button" ng-click="hf.newFun()">Fight!!!</button> <!-- hf.newFun() is when the button is click a random number will be generated for user and the if/else statement -->
+    <!-- hf.counting() will be called when the button is click -->
+    <h4>Your Defence Skill Level {{hf.item}}</h4> <!-- {{hr.item}} will display userRandom generated to the DOM -->
+  </div>
+  <div ng-init="hf.result()">
+    <h2>How many times you survived Saitama NORMAL PUNCH!!! {{hf.count}}</h2>
+    <h1>{{hf.object}}</h1> <!-- to display with string from the if/else statement form client side -->
+    <!-- <img src="{{hf.picture}}"> -->
+  </div>
+</div>
